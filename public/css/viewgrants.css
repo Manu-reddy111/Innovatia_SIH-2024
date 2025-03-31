@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+    color: inherit;
+}
+
+li {
+	list-style: none;
+}
+
+:root {
+	--poppins: 'Poppins', sans-serif;
+	--lato: 'Lato', sans-serif;
+
+	--light: #F9F9F9;
+	--blue: #3C91E6;
+	--light-blue: #CFE8FF;
+	--grey: #eee;
+	--dark-grey: #AAAAAA;
+	--dark: #342E37;
+	--red: #DB504A;
+	--yellow: #FFCE26;
+	--light-yellow: #FFF2C6;
+	--orange: #FD7238;
+	--light-orange: #FFE0D3;
+	
+}
+
+html {
+	overflow-x: hidden;
+}
+
+body.dark {
+	--light: #0C0C1E;
+	--grey: #060714;
+	--dark: #FBFBFB;
+}
+
+body {
+	
+	overflow-x: hidden;
+   
+}
+
+.main2{
+    width: 100%;
+    display: flex;
+    
+    
+    
+    
+    height: 100vh;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    border-radius: 1rem;
+    color: var(--dark);
+	
+	font-family: var(--poppins);
+	max-height: calc(100vh - 56px);
+	overflow-y: auto;
+    background-color: var(--light);
+}
+.viewproject-part1{
+    height: 100%;
+    padding: 40px 40px;
+    width: 40%;
+    
+    
+}
+.viewproject-part2{
+    height: 100%;
+    padding: 40px 40px;
+    width: 60%;
+    
+    
+}
+.viewproject-part1 .project-title{
+   font-size: 3rem;
+   font-weight: 400;
+}
+.viewproject-part1-p1 {
+    height: 50%;
+    width: 90%;
+    margin: 1rem;
+    border-radius: 1rem;
+    overflow: hidden; /* Ensure content respects the border radius */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Creates the floating shadow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+    background-color: white; /* Background for fallback */
+}
+
+/* Add hover effect for a floating illusion */
+/* .viewproject-part1-p1:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); 
+} */
+
+.viewproject-part1-p1 .thumbnail-image {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+    border-radius: 1rem; /* Ensures the image respects the border radius */
+}
+.project-links a:nth-child(1) i{
+    font-size: 1rem;
+    background: var(--light-orange);
+    color: var(--orange);
+    padding: 7px 9px;
+    border-radius: 10px;
+   
+
+}
+.project-links a:nth-child(1) {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    background: var(--light-blue);
+    color: var(--blue);
+    padding: 7px 9px;
+    border-radius: 10px;
+    
+
+}
+.project-links a:nth-child(2) {
+    font-size: 1rem;
+    background: var(--light-blue);
+    color: var(--blue);
+    padding: 10px 8px;
+    border-radius: 10px;
+    
+
+}
+.project-links{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: 8rem;
+}
+.upload-images{
+    height: 50%;
+    margin: 1rem;
+    display: flex;
+    width: 90%;
+  
+    margin-top: 2rem;
+    overflow: hidden;
+    flex-wrap: wrap;
+    cursor: pointer;
+    border-radius: 1rem;
+
+}
+.upload-images-part1{
+    height: 50%;
+   
+    width: 50%;
+    
+    border: 0.1px solid black;
+}
+.upload-images .upload-images-part1:nth-child(4) {
+    position: relative; /* Ensure this container is the reference for the absolute positioning */
+    overflow: hidden; /* Prevent content overflow */
+}
+
+.upload-images .upload-images-part1:nth-child(4) h1 {
+    font-size: 4rem;
+    font-weight: 400;
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for exact center */
+    color: var(--light); /* Text color */
+    text-align: center;
+    z-index: 2; /* Ensure the text is above the image */
+    background: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background */
+    padding: 0.5rem 1rem; /* Optional: Add padding for better readability */
+    border-radius: 0.5rem; /* Optional: Add rounded corners to the background */
+}
+
+.upload-images-part1 img{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+   
+
+
+}
+.researchpapers{
+    
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+.researchpapers li{
+    
+   
+   
+	
+	border-radius: 1rem;
+	display: flex;
+	align-items: center;
+	grid-gap: 15px;
+   cursor: pointer;
+   
+   margin-top: 3rem;
+   margin-bottom: 2rem;
+	
+
+}
+
+
+.researchpapers i{
+    width: 80px;
+	height: 80px;
+	border-radius: 10px;
+	font-size: 36px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    background: var(--light-yellow);
+	color: var(--yellow);
+    
+
+}
+.patents{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.patents li{
+    padding: 10px;
+	
+	border-radius: 1rem;
+	display: flex;
+	align-items: center;
+	grid-gap: 24px;
+   cursor: pointer;
+   
+   margin-top: 3rem;
+   margin-bottom: 2rem;
+}
+.patents i{
+    width: 80px;
+	height: 80px;
+	border-radius: 10px;
+	font-size: 36px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    background: var(--light-orange);
+    color: var(--orange);
+}
+.project-zip{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.project-zip li{
+    padding: 10px;
+	
+	border-radius: 1rem;
+	display: flex;
+	align-items: center;
+	grid-gap: 24px;
+   cursor: pointer;
+   
+   margin-top: 3rem;
+   margin-bottom: 2rem;
+}
+.project-zip i{
+    width: 80px;
+	height: 80px;
+	border-radius: 10px;
+	font-size: 36px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    background: var(--light-blue);
+    color: var(--blue);
+}
+.other-certificates{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.other-certificates li{
+    padding: 10px;
+	
+	border-radius: 1rem;
+	display: flex;
+	align-items: center;
+	grid-gap: 24px;
+   cursor: pointer;
+   
+   margin-top: 3rem;
+   margin-bottom: 2rem;
+}
+.other-certificates i{
+    width: 80px;
+	height: 80px;
+	border-radius: 10px;
+	font-size: 36px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    background: var(--light-yellow);
+	color: var(--yellow);
+}
+.student-usernamepic{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+   
+    flex: 1;
+
+}
+.student-usernamepic p {
+    
+    
+	
+	font-size: 20px;
+
+
+}
+.student-usernamepic img{
+    width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+.viewproject-part2{
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    
+    gap: 1rem;
+}
+.studentdata{
+    padding: 0px 30px;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+
+}
+ .student-data1{
+   
+    display: flex;
+    gap: 40px;
+    width: 100%;
+   
+    
+
+}
+ .student-data1 p{
+    font-size: 15px;
+    display: flex;
+    gap: 10px;
+    
+  
+
+}
+.student-data1 p i{
+    font-size: 25px;
+
+}
+.student-data2{
+    display: flex;
+    gap: 2rem;
+}
+.student-data3{
+    
+    display: flex;
+    
+    gap: 2rem;
+
+}
+.student-data3 i{
+    font-size: 20px;
+
+}
+.student-data3 p{
+    font-size: 16px;
+}
+.student-data3 p:nth-of-type(1) i{
+    color: #FFCE26;
+}
+.student-data3 p:nth-of-type(2) i{
+    color: #AAAAAA;
+}
+.student-data4{
+    
+    
+   
+    display: flex;
+    gap: 2rem;
+}
+.student-data4 i{
+    color: #FFCE26;
+}
+.student-data5{
+    margin-top: 2rem;
+    letter-spacing: 1px;
+    word-spacing: 0.5rem;
+    line-height: 2rem;
+    font-size:17px;
+    font-weight: 200;
+
+}
+.student-data7{
+   
+    margin-top: 2rem;
+    letter-spacing: 1px;
+    word-spacing: 0.5rem;
+    line-height: 2rem;
+    font-size:17px;
+    font-weight: 200;
+    
+
+}
+.student-data8{
+   
+    margin-top: 2rem;
+    letter-spacing: 1px;
+    word-spacing: 0.5rem;
+    line-height: 2rem;
+    font-size:17px;
+    font-weight: 200;
+
+}
+.student-data8 p{
+    font-size: 15px;
+}
+.title-project-std{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.title-project-std i{
+    color: #FFCE26;
+}
+.title-project-std p:hover{
+    color: #3C91E6;
+}
+.date-uploaded p{
+    font-size: 13px;
+   
+
+}
+.student-data6{
+   
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+   
+    width: 100%;
+  
+    
+
+}
+ .student-data6 p{
+    font-size: 15px;
+    display: flex;
+    gap: 8px;
+    
+  
+
+}
+.student-data6 p i{
+    font-size: 25px;
+
+}
+.student-data6 .tech {
+    display: inline-block; /* Keep each technology as an inline element */
+    margin-right: 0.5rem; /* Add space between technologies */
+    padding: 0.2rem 0.4rem; /* Optional: Add padding for better spacing */
+    background-color: var(--light-gray); /* Optional: Add a background for clarity */
+    border-radius: 4px; /* Optional: Rounded corners */
+    font-size: 14px; /* Adjust font size */
+}
+.student-data7 {
+    display: flex;
+    flex-direction: column;
+     /* Add spacing between rows */
+}
+
+.student-data7 li {
+    display: flex;
+    justify-content: space-between; /* Align items to the ends */
+    align-items: center;
+    padding: 0.5rem;
+     /* Optional: Add a line between rows */
+}
+
+.student-name,
+.student-number {
+    display: flex;
+    align-items: center;
+    flex: 1; /* Equal width for both columns */
+}
+
+.student-name {
+    gap: 0.5rem; /* Spacing between icon and name */
+}
+
+.student-number {
+    justify-content: flex-start; /* Align numbers to the right */
+}
+
+.student-data7 p {
+    font-size: 15px;
+    margin: 0; /* Remove default margin */
+}
+
+.student-data7 img {
+    filter: sepia(1) hue-rotate(200deg) saturate(500%);
+    height: 40px;
+    width: 40px; /* Ensure consistent image size */
+    border-radius: 50%; /* Optional: Make images circular */
+}
+.std-profile{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
