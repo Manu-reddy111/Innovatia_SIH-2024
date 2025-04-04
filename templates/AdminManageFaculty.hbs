@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet"
+	href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+	<!-- My CSS -->
+	<link rel="stylesheet" href="css/home.css">
+	<link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+	<link rel="stylesheet" href="css/dashboard.css">
+
+	<title>Admin-Dashboard</title>
+</head>
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar" class="hide">
+		<a href="/AdminHomepage" class="brand">
+			<i class='bx bxs-dashboard'></i>
+			<span class="text">Innovatia</span>
+		</a>
+		
+		<ul class="side-menu">
+			<li class="active">
+				<a href="/AdminHomepage" > <!-- matches contentMap['home'] -->
+
+					<i class='bx bxs-home-alt-2'></i>
+					<span class="text">Home</span>
+				</a>
+			</li>
+			
+			<li>
+				<a href="/AdminLeaderboard" >
+					<i class='bx bxs-bar-chart-alt-2'></i>
+					<span class="text">Leaderboard</span>
+				</a>
+			</li>
+			<li>
+				<a href="/AdminManageStudent" >
+					<i class='bx bx-user'></i>
+					
+					<span class="text">Manage Students</span>
+				</a>
+			</li>
+			<li>
+				<a href="/AdminManageFaculty" >
+					<i class='bx bx-user-voice' ></i>
+					<span class="text">Manage Faculty</span>
+				</a>
+			</li>
+			<li>
+				<a href="/AdminFaculty" >
+					<i class='bx bx-user-plus'></i>
+					<span class="text">New Faculty Requests</span>
+				</a>
+			</li>
+			
+			<li>
+				<a href="/AdminProjectRequests" >
+					<i class='bx bxs-folder-open' ></i>
+					
+					<span class="text">Project Requests</span>
+				</a>
+			</li>
+			<li>
+				<a href="/ALogout" class="/Logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<a href="#" class="nav-link">Categories</a>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a href="/notification" class="notification">
+				<i class='bx bxs-bell' ></i>
+				<span class="num">8</span>
+			</a>
+			
+				<!-- Assuming this is in your navbar -->
+<nav>
+    <div class="profile" id="profile">
+        <img src="img/people.png" alt="Profile Picture" class="profile-img">
+    </div>
+    <div id="profileMenu" class="profile-menu">
+        <ul>         
+            <li><a href="/ALogout">Logout</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+			
+
+
+
+
+
+
+
+
+
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				 
+				
+			</div>
+			<div class="studentprofile" style="height: 95px;">
+				<div class="studentprofile-top">
+					
+					<div class="studentprofile-left">
+						<h3>Manage Staff Profiles</h3> 
+						
+					</div>
+					<div class="studentprofile-right">
+						<span class="text">Add New Faculty</span><i class='bx bxs-edit-alt'></i>
+					</div>
+				</div> 
+                
+<div id="edit-form-container" style="display: none;"> 
+   <form action="/AdminAddStaff" method="post" id="editform" enctype="multipart/form-data">
+        
+  <h3>Add New Faculty</h3>
+ 
+  <label for="github-link">First Name:</label> 
+   <input class="input" type="text" name="firstname" placeholder="Enter First Name" required>
+  <label for="linkedin-link">Last Name:</label>
+   <input class="input" type="text" name="lastname" placeholder="Enter Last Name" required>
+  <label for="facebook-link">Username:</label> 
+                        <input class="input" type="text" name="username" placeholder="Enter User Name" required>
+ 
+  <label for="background-image">Email</label>
+   <input class="input" type="email" name="email" placeholder=" Enter Emamil id" required>
+   <label for="profile-image">Password:</label>
+   <input class="input" type="password" name="password" placeholder="Enter password" required>
+
+  <label for="department">Confirm Password:</label>
+  <input class="input" type="password" name="confirmPassword" placeholder="Enter confirm password" required>
+                        
+  <label for="hall-ticket">College Name:</label>
+   <input class="input" type="text" name="collegename" placeholder="Enter College Name"  required="">
+  <label for="hall-ticket">Department:</label>
+   <select class="input" name="department" required="">
+                            <option value="" disabled selected>Select Department</option>
+                        				<option value="Yoga">Yoga	</option>
+										<option value="Homeopathy">Homeopathy</option>
+										<option value="Naturopathy">Naturopathy</option>
+										<option value="Ayurveda">Ayurveda</option>
+										<option value="Unani">Unani</option>
+										<option value="Siddha">Siddha</option>
+										<option value="Bpharm">BPHARM</option>
+										<option value="Others">Others</option> </select>         
+  <label for="hall-ticket">Date of join:</label>
+  <input type="text" name="doj" id="hall-ticket" placeholder="Enter Date of join" required>
+<label for="hall-ticket">Employeeid Number:</label>
+<input class="input" type="text" name="employeeid" placeholder="" required>
+
+
+  <div id="awards-section">
+    <h4>Phone:</h4>
+    <div class="dynamic-field">  
+      <input class="input" type="tel" name="phone" placeholder="Enter Phone" required>
+    </div>
+  </div>
+ 
+  <div id="wins-section">
+    <h4>Profile pic</h4>
+    <div class="dynamic-field">
+      <input class="input" type="file" name="file" placeholder="" required>
+    </div>
+  </div>
+ 
+      <input type="submit" name="submit"> 
+</form>
+
+   
+</div>
+
+				
+			</div>
+
+			
+
+
+			
+			<div class="table-data">
+				<div class="order">
+					 
+                    
+					{{#if Message}}
+        <p class="{{#if isError}}error-message{{else}}success-message{{/if}}">
+            {{Message}}
+        </p>
+        {{/if}}
+		
+		{{#if Staff.length}}
+					<table>
+						<thead>
+							<tr>
+
+								<th>S.no</th>
+								<th>User Name</th>
+								<th>First Name</th>
+								<th>Last Name</th>
+								<th>Email Id</th>
+								<th>College Name</th>
+								<th>EmployeeId</th>
+								<th>Department</th>
+								<th>Date Of Join</th>
+								<th>phone</th>  
+								<th>Delete</th> 
+								</tr>
+						</thead>
+						<tbody>
+							
+							{{#each Staff}}
+							<tr>
+								<td>
+									<span>{{increment @index}}</span>
+								</td>
+								<td class="std-profile">
+									
+									<p> <span><img src="{{this.profilePic}}"></span>{{this.username}}</p>
+								</td>
+								<td>{{this.firstname}}</td>
+								<td>{{this.lastname}}</td>
+								<td>{{this.email}}</td>
+								<td>{{this.collegename}}</td>
+								<td>{{this.employeeid}}</td>
+								<td>{{this.department}}</td>
+								<td>{{this.doj}}</td>
+								<td>{{this.phone}}</td>   
+								<td> 
+                                
+                                 <form action="/AdminStaffDelete" method="post">
+								 <input type="hidden" name="username" value="{{this.username}}">
+  								 <button type="submit" class="submit">
+                                      <i class="ri-delete-bin-6-line"></i>
+								</button>
+								</form>	
+                                
+                                </td>
+							</tr>
+							   {{/each}}
+						</tbody>
+					</table> 
+					{{else}}
+        				<p>No user data found.</p>
+    				{{/if}}
+				</div>
+				
+
+
+
+                
+			</div>
+			
+		</main>
+		<!-- MAIN -->
+	</section>
+	
+
+	<script src="js/script.js"></script>
+	<script src="js/dashboard.js"></script>
+</body>
+</html>

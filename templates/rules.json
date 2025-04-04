@@ -1,0 +1,21 @@
+{
+  "type": "Project",
+  "categories": ["Healthcare", "Technology", "Education"],
+  "rules": [
+    {
+      "id": "IP_Compliance",
+      "description": "Ensure no infringement on patents or copyrights.",
+      "criteria": ["properly attributed", "free of infringement"]
+    },
+    {
+      "id": "Ethics",
+      "description": "Follow ethical guidelines and privacy laws.",
+      "criteria": ["GDPR compliance", "ethical guidelines followed"]
+    },
+    {
+      "id": "Documentation",
+      "description": "Include concise documentation with goals and results.",
+      "criteria": ["clear documentation", "methodology included"]
+    }
+  ]
+}

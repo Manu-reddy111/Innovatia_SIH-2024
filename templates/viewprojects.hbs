@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet"
+	href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+	<!-- My CSS -->
+	<link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/viewproject.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+
+	<title>Student - View Projects</title>
+</head>
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar" class="hide">
+		<a href="/viewprojects" class="brand">
+			<i class='bx bxs-dashboard'></i>
+			<span class="text">Innovatia</span>
+		</a>
+		
+		<ul class="side-menu">
+			<li >
+				<a href="/homepage" > <!-- matches contentMap['home'] -->
+
+					<i class='bx bxs-home-alt-2'></i>
+					<span class="text">Home</span>
+				</a>
+			</li>
+			<li>
+				<a href="/dashboard" >
+					<i class='bx bxs-dashboard'  ></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			<li >
+				<a href="/recentpublications" >
+					<i class='bx bxs-folder-open' ></i>
+					<span class="text">Publications</span>
+				</a>
+			</li>
+			<li>
+				<a href="/leaderboard" >
+					<i class='bx bxs-bar-chart-alt-2'></i>
+					<span class="text">Leaderboard</span>
+				</a>
+			</li>
+			
+			
+		
+			
+			<li>
+				<a href="/recentachievements" >
+					<i class='bx bxs-award'></i>
+					<span class="text">Achievements</span>
+				</a>
+			</li>
+			<li>
+				<a href="/recentgrants" >
+					<i class='bx bxs-bank' ></i>
+					<span class="text">Grants</span>
+				</a>
+			</li>
+			<li>
+				<a href="/recentstartupincubated" >
+					<i class='bx bxs-buildings'></i>
+					<span class="text">startupincubated</span>
+				</a>
+			</li>
+			
+		</ul>
+		<ul class="side-menu" >
+			<li>
+				<a href="/Settings">
+					<i class='bx bxs-cog' ></i>
+					<span class="text">Settings</span>
+				</a>
+			</li>
+			<li>
+				<a href="/Logout" class="/Logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<a href="#" class="nav-link">Categories</a>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a href="/notification" class="notification">
+				<i class='bx bxs-bell' ></i>
+				<span class="num">8</span>
+			</a>
+			
+				<!-- Assuming this is in your navbar -->
+<nav>
+    <div class="profile" id="profile">
+        <img src="/{{student.profilePic}}" alt="Profile Picture" class="profile-img">
+    </div>
+    <div id="profileMenu" class="profile-menu">
+        <ul>
+            <li><a href="#">Profile</a></li>          
+            <li><a href="/Logout">Logout</a></li>
+        </ul>
+    </div>
+</nav>
+
+			
+
+
+
+
+
+
+
+
+
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<div class="main2">
+            <div class="viewproject-part1">
+                <div class="title-project-std">
+                    <h4 class="project-title">{{student.username}} -Innovatia </h4>
+                    <p> <i class='bx bx-badge'></i> Golden Badge 2024</p>
+
+                </div>
+                    <div class="viewproject-part1-p1" >
+                        <img class="thumbnail-image"  src="/{{Uploadpub.thumbnailFile}}" alt="">
+
+                    </div>
+                    <div class="project-links">
+                        <a href="{{Uploadpub.GitHub}}" ><i class="bx bxl-github"></i>GitHub</a>
+                        <a href="{{Uploadpub.Live}}" >Live Demo</a> 
+                    </div>
+                    <div class="upload-images">
+                        {{#each Uploadpub.imageFiles}} 
+                            
+                        <div class="upload-images-part1">
+                            <img src="/{{this}}" alt="">
+                            
+                        </div> 
+                        {{/each}}
+
+                    </div>
+                    <div class="researchpapers">
+                         {{#each Uploadpub.researchPapers}}  
+                        <li>
+                            <i class='bx bx-file-blank'></i>
+                            <span class="text"> <p>
+                                <a href="/{{this}}">Research paper's</a> </p> </span>
+                        </li>{{/each}} 
+
+                    </div>
+                    
+                   
+                    <div class="patents">
+                        
+                         {{#each Uploadpub.patentDocs}}  
+                        <li>
+                            <i class='bx bxs-notepad'></i>
+                            <span class="text"> <p>
+                                <a href="/{{this}}">Patent Doc</a>  </p></span>
+                        </li>{{/each}}  
+
+                    </div>
+                    <div class="project-zip">
+                         {{#each Uploadpub.projectFiles}}  
+                        <li>
+                            <i class='bx bx-folder'></i>
+                            <span class="text">  <p>
+                                <a href="/{{this}}">Project Zip </a>   </p>   </span>
+                        </li>{{/each}} 
+                         
+
+                    </div>
+                    <div class="other-certificates">
+                          {{#each Uploadpub.projectFiles}}
+                        <li>
+                            <i class='bx bx-certification' ></i>
+                            <span class="text"> 
+                                 <p> <a href="/{{this}}">Certificate</a> </p>
+                            </span>
+                        </li>{{/each}}  
+
+                    </div>
+                    
+
+                
+            </div>
+            <div class="viewproject-part2">
+                <div class="student-usernamepic">
+                   <div class="std-profile">
+                    <span><img src="/{{student.profilePic}}"></span>
+                    <p> {{student.username}}  </p>
+                   </div>
+                    <span class="star-rating">
+ 					{{#if (eq Projects.Rating "0")}}
+            			<i class="far fa-star"></i>
+						<i class="far fa-star"></i>
+						<i class="far fa-star"></i>
+						<i class="far fa-star"></i>
+						<i class="far fa-star"></i>
+          			{{else if (eq Projects.Rating "1")}}
+		  				<i class="fas fa-star"></i>
+						<i class="far fa-star"></i>
+						<i class="far fa-star"></i>
+						<i class="far fa-star"></i>
+						<i class="far fa-star"></i>
+          			{{else if (eq Projects.Rating "2")}}
+		  				<i class="fas fa-star"></i>
+		  				<i class="fas fa-star"></i>
+						<i class="far fa-star"></i>
+						<i class="far fa-star"></i>
+						<i class="far fa-star"></i>
+          			{{else if (eq Projects.Rating "3")}}
+		  				<i class="fas fa-star"></i>
+		  				<i class="fas fa-star"></i>
+		  				<i class="fas fa-star"></i>
+						<i class="far fa-star"></i>
+						<i class="far fa-star"></i>
+          			{{else if (eq Projects.Rating "4")}}
+		  				<i class="fas fa-star"></i>
+		  				<i class="fas fa-star"></i>
+		  				<i class="fas fa-star"></i>
+		  				<i class="fas fa-star"></i>
+						<i class="far fa-star"></i>
+          			{{else if (eq Projects.Rating "5")}}
+          			  	<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+          			{{else}}
+						<i class="far fa-star"></i>
+						<i class="far fa-star"></i>
+						<i class="far fa-star"></i>
+						<i class="far fa-star"></i>
+						<i class="far fa-star"></i>
+          			{{/if}} 
+                    </span>
+
+                    
+                    
+
+
+                </div>
+                
+                <div class="studentdata">
+                    <span class="date-uploaded"><p>posted on {{Projects.Uploaddate}} </p></span>
+                    <div class="student-data1">
+                        <p> <span><i class='bx bxs-invader' ></i></span>{{student.department}}</p>
+                        <p> <span><i class='bx bxs-hard-hat' ></i></span>{{student.hallticket}}</p>
+    
+                    </div>
+                    <div class="student-data6">
+                        <p><span><i class='bx bxs-invader'></i></span> {{Projects.ProjectTitle}}</p>
+                        <p>
+                            <span><i class='bx bx-code-alt'></i></span> 
+                            {{#each Uploadpub.TechStack}}
+                                    <span class="tech">{{this}}</span>
+                            {{/each}}
+
+
+ 
+                        </p>
+                        <p><span><i class='bx bxl-mongodb'></i></span> {{Uploadpub.TeamName}}</p>
+                    </div>
+                    
+                    <div class="student-data7">
+                          {{#each Uploadpub.teamData}}
+                        <li>
+                            <div class="student-name">
+                                <span><img src="/img/user.png" alt=""></span>
+                                <p>{{this.name}}</p>
+                            </div>
+                            <div class="student-number">
+                                <p>{{this.hallTicket}}</p>
+                            </div>
+                        </li>
+                        {{/each}} 
+                    </div>
+                    
+
+                    <div class="student-data2">
+                         {{#each Uploadpub.Awards}} 
+                        <p> <i class='bx bxs-award' ></i></span> {{this}}   <span><i class='bx bxl-google' ></i></span></p> 
+                        {{/each}}
+                    </div> 
+                    <div class="student-data4">
+                         {{#each Uploadpub.Wins}} 
+                         <p><i class="ri-trophy-fill"></i> {{this}}  </p> 
+                         {{/each}}
+                       
+                    </div>
+                   
+                    <div class="student-data5">
+                        <p>{{Uploadpub.Description}} </p>
+                    </div>
+                    <div class="student-data7">
+                        <h4>Start-up plans</h4>
+                        
+                        <p>{{Uploadpub.StartupIdea}} </p> 
+                    </div>
+                </div>
+                
+
+            </div>
+
+        </div>
+            
+			
+			
+		
+		<!-- MAIN -->
+	</section>
+	
+
+	<script src="/js/script.js"></script>
+	<script src="/js/publications.js"></script>
+</body>
+</html>

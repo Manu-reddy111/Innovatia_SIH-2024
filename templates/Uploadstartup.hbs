@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet"
+	href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+	<!-- My CSS -->
+	<link rel="stylesheet" href="css/home.css">
+	<link rel="stylesheet" href="css/publications.css">
+	<link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+
+	<title>Student-Publications</title>
+</head>
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar" class="hide">
+		<a href="/Uploadstartup" class="brand">
+			<i class='bx bxs-dashboard'></i>
+			<span class="text">Innovatia</span>
+		</a>
+		
+		<ul class="side-menu">
+			<li >
+				<a href="/Uploadstartup" > <!-- matches contentMap['home'] -->
+
+					<i class='bx bxs-home-alt-2'></i>
+					<span class="text">Home</span>
+				</a>
+			</li>
+			<li>
+				<a href="/dashboard" >
+					<i class='bx bxs-dashboard'  ></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<a href="/recentpublications" >
+					<i class='bx bxs-folder-open' ></i>
+					<span class="text">Publications</span>
+				</a>
+			</li>
+			<li>
+				<a href="/leaderboard" >
+					<i class='bx bxs-bar-chart-alt-2'></i>
+					<span class="text">Leaderboard</span>
+				</a>
+			</li>
+			
+			
+		
+			
+			<li>
+				<a href="/recentachievements" >
+					<i class='bx bxs-award'></i>
+					<span class="text">Achievements</span>
+				</a>
+			</li>
+			<li>
+				<a href="/recentgrants" >
+					<i class='bx bxs-bank' ></i>
+					<span class="text">Grants</span>
+				</a>
+			</li>
+			<li class="active">
+				<a href="/recentstartups" >
+					<i class='bx bxs-buildings'></i>
+					<span class="text">startupincubated</span>
+				</a>
+			</li>
+			
+		</ul>
+		<ul class="side-menu" >
+			<li>
+				<a href="/Settings">
+					<i class='bx bxs-cog' ></i>
+					<span class="text">Settings</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="/Logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<a href="#" class="nav-link">Categories</a>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a href="/notification" class="notification">
+				<i class='bx bxs-bell' ></i>
+				<span class="num">8</span>
+			</a>
+			
+				<!-- Assuming this is in your navbar -->
+<nav>
+    <div class="profile" id="profile">
+        <img src="{{profilePic}}" alt="Profile Picture" class="profile-img">
+    </div>
+    <div id="profileMenu" class="profile-menu">
+        <ul>
+            <li><a href="#">Profile</a></li>          
+            <li><a href="/Logout">Logout</a></li>
+        </ul>
+    </div>
+</nav>
+
+			
+
+
+
+
+
+
+
+
+
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1> {{username}} - StartUps Incubated</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#"> Publications</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a class="active" href="#">Home</a>
+						</li>
+					</ul>
+				</div>
+				
+				<!-- <a href="#" class="btn-download">
+					<i class='bx bxs-cloud-download' ></i>
+					<span class="text">Upload project</span>
+				</a> -->
+			</div>
+			<div class="publications">
+				 {{#if Message}}
+        <p class="{{#if isError}}error-message{{else}}success-message{{/if}}">
+            {{Message}}
+        </p>
+        {{/if}}
+				<form action="/Uploadstartup" id="publication-form" method="post"   enctype="multipart/form-data" >
+					<div class="publication-part1">
+						<h3>Project Title:</h3>
+						<div class="input-container">
+							<input type="text" name="Projectname" required />
+						</div>
+					</div>
+				
+						<div class="publication-part3">
+							<h3>Department:</h3>
+							<div class="input-container">
+								<select name="Department" required >
+									<option value="project">CSE</option>
+									<option value="research-project">ECE</option>
+									<option value="patent">EEE</option>
+									<option value="publication">CIVIL</option>
+									<option value="publication">MECH</option>
+									<option value="publication">BPHARM</option>
+								</select>
+							</div>
+						</div>
+						<div class="publication-part4">
+							<h3>Tech Stack:</h3>
+							<div class="publication-part4-part1">
+								<div class="input-container">
+									<input type="text" id="tech-stack-input" placeholder="Select or enter tech stack" name="TechStack" required />
+								</div>
+								<div class="tech-stack-options">
+									<span class="tech-tag">HTML</span>
+									<span class="tech-tag">CSS</span>
+									<span class="tech-tag">JavaScript</span>
+									<span class="tech-tag">Node.js</span>
+									<span class="tech-tag">Express.js</span>
+									<span class="tech-tag">MongoDB</span>
+									<span class="tech-tag">React</span>
+									<span class="tech-tag">Next.js</span>
+									<span class="tech-tag">SQL</span>
+									<span class="tech-tag">Python</span>
+									<span class="tech-tag">C</span>
+									<span class="tech-tag">C++</span>
+									<span class="tech-tag">Java</span>
+									<span class="tech-tag">Other</span>
+								</div>
+							</div>
+						</div>
+						<div class="publication-part17">
+							<h3>Start Up Name:</h3>
+							<div class="input-container">
+							<input type="text" name="Startupname" required />
+						</div>
+						</div>
+						<div class="publication-part17">
+							<h3>Start Up Idea :</h3>
+							<div class="input-container">
+								<textarea placeholder="Enter project description here..." name="StartupIdea" required></textarea>
+							</div>
+						</div>
+						<div class="publication-part17">
+							<h3>Start Up Investment Required:</h3>
+							<div class="input-container">
+							<input type="text" name="SI" required />
+						</div>
+						</div>
+
+						<div class="publication-part5">
+							<h3>Team Name:</h3>
+							<div class="input-container" >
+								<input type="text"   name="TeamName" required  />
+								
+							</div>
+							
+						</div>
+						<div class="publication-part6">
+							<div id="team-member-container">
+								<div class="input-row">
+									<div class="team-members-column">
+										<div class="input-container">
+											<input type="text" placeholder="Enter Team Member Name"   name="TeamMember" required  />
+										</div>
+									</div>
+									<div class="hall-ticket-column">
+										<div class="input-container">
+											<input type="text" placeholder="Enter Hall Ticket No"  name="HallTicket" required />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="publication-part6-controls">
+								<button id="add-field">+</button>
+								<button id="remove-field">-</button>
+							</div>
+						</div>
+						
+						<div class="publication-part7">
+								<div id="awards-container">
+										<h3>Awards:</h3>
+										<div class="input-container">
+											<input type="text" class="award-input" name="award" required  />
+										</div>
+								</div>
+								<div class="publication-part7-controls">
+										<button id="add-award">+</button>
+										<button id="remove-award">-</button>
+								</div>
+						</div>
+								
+						<div class="publication-part8">
+							<div id="wins-container">
+								<h3>Wins:</h3>
+								<div class="input-container">
+									<input type="text" class="win-input" placeholder="Enter Win"   name="Win" required />
+								</div>
+							</div>
+							<div class="publication-part8-controls">
+								<button id="add-win">+</button>
+								<button id="remove-win">-</button>
+							</div>
+						</div>
+						
+						
+						<div class="publication-part9">
+							<h3>Upload Thumbnail File:</h3>
+							<div id="drag-drop-area" class="box-1">
+								<p>Drag and drop a file here, or click to select manually</p>
+								<i class="fas fa-upload" style="font-size: 40px; color: #888;"></i>
+								<input id="fileInput" type="file" accept="image/*, video/*"  name="thumbnailFile" required  hidden>
+							</div>
+							<div id="fileLinkContainer"></div> <!-- Display file link here -->
+						</div>
+						<div class="publication-part10">
+							<h3>Upload Image Files:</h3>
+							<div id="multi-drag-drop-area" class="box-1">
+								<p>Drag and drop files here, or click to select manually</p>
+								<i class="fas fa-upload" style="font-size: 40px; color: #888;"></i>
+								<input id="multiFileInput" type="file" accept="image/*" name="imageFiles" required multiple hidden>
+							</div>
+							<div id="multiFileLinkContainer"></div> <!-- Display file links here -->
+						</div>
+						<div class="publication-part11">
+							<h3>Upload Research Papers:</h3>
+							<div id="publication-part11-box" class="box-1">
+								<p>Drag and drop files here, or click to select manually</p>
+								<i class="fas fa-upload" style="font-size: 40px; color: #888;"></i>
+								<input id="publication-part11-input" type="file" name="researchPapers" required multiple style="display: none;">
+							</div>
+							<div id="publication-part11-links" class="uploaded-links"></div>
+						</div>
+						
+						<div class="publication-part12">
+							<h3>Upload Patent Docs:</h3>
+							<div id="publication-part12-box" class="box-1">
+								<p>Drag and drop files here, or click to select manually</p>
+								<i class="fas fa-upload" style="font-size: 40px; color: #888;"></i>
+								<input id="publication-part12-input" type="file" name="patentDocs" required multiple style="display: none;">
+							</div>
+							<div id="publication-part12-links" class="uploaded-links"></div>
+						</div>
+						<!-- Publication Part 13: Upload Project Files -->
+						<!-- Publication Part 13: Upload Project Files -->
+						<div class="publication-part13">
+							<h3>Upload Project Files:</h3>
+							<div id="publication-part13-box" class="box-1">
+								<p>Drag and drop files here, or click to select manually</p>
+								<i class="fas fa-upload" style="font-size: 40px; color: #888;"></i>
+								<input 
+									id="publication-part13-input" 
+									type="file"  name="projectFiles" required
+									multiple 
+									style="display: none;" 
+									accept="*/*" 
+								/>
+							</div>
+							<div id="publication-part13-links" class="uploaded-links"></div>
+						</div>
+
+						<!-- Publication Part 14: Upload Other Certificates -->
+						<div class="publication-part14">
+							<h3>Upload Other Certificates:</h3>
+							<div id="publication-part14-box" class="box-1">
+								<p>Drag and drop files here, or click to select manually</p>
+								<i class="fas fa-upload" style="font-size: 40px; color: #888;"></i>
+								<input 
+									id="publication-part14-input" 
+									type="file"  name="certificates" required
+									multiple 
+									style="display: none;" 
+									accept="*/*" 
+								/>
+							</div>
+							<div id="publication-part14-links" class="uploaded-links"></div>
+						</div>
+						<div class="publication-part15">
+							<h3>GitHub Link    <span> <i class='bx bxl-github'></i></span>     </h3>
+							<div class="input-container">
+								<input type="text" name="GitHub" required />
+							</div>
+							
+						</div>
+						<div class="publication-part16">
+							<h3>Live Demo<span> <i class='bx bx-link-alt' ></i></span>     </h3>
+							<div class="input-container">
+								<input type="text" name="Live" required  />
+							</div>
+							
+						</div>
+						
+						<div class="publication-part18">
+							<h3>Description:</h3>
+							<div class="input-container">
+								<textarea placeholder="Enter project description here..." name="Description" required ></textarea>
+							</div>
+						</div>
+						
+						
+						
+ <input class="button" type="submit" name="uploadproject" value="uploadproject" style="margin-left: 5px;    border-left-width: 8px;    border-top-width: 8px;    border-bottom-width: 8px;     width: 1021px;    margin-right: 5px;    border-right-width: 8px;" >
+           
+
+				
+			 	</form>
+			</div>
+			
+		</main>
+		<!-- MAIN -->
+	</section>
+	<script src="js/publications.js"></script>
+	
+	
+
+	<script src="js/script.js"></script>
+</body>
+</html>

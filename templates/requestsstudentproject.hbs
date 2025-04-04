@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet"
+	href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+	<!-- My CSS -->
+	<link rel="stylesheet" href="/css/style.css">
+	<link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+	<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+	<title>Innovatia</title>
+</head>
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar" class="hide">
+		<a href="/AdminHomepage" class="brand">
+			<i class='bx bxs-dashboard'></i>
+			<span class="text">Innovatia</span>
+		</a>
+		
+		<ul class="side-menu">
+			<li class="active">
+				<a href="/AdminHomepage" > <!-- matches contentMap['home'] -->
+
+					<i class='bx bxs-home-alt-2'></i>
+					<span class="text">Home</span>
+				</a>
+			</li>
+			
+			<li>
+				<a href="/AdminLeaderboard" >
+					<i class='bx bxs-bar-chart-alt-2'></i>
+					<span class="text">Leaderboard</span>
+				</a>
+			</li>
+			<li>
+				<a href="/AdminManageStudent" >
+					<i class='bx bx-user'></i>
+					
+					<span class="text">Manage Students</span>
+				</a>
+			</li>
+			<li>
+				<a href="/AdminManageFaculty" >
+					<i class='bx bx-user-voice' ></i>
+					<span class="text">Manage Faculty</span>
+				</a>
+			</li>
+			<li>
+				<a href="/AdminFaculty" >
+					<i class='bx bx-user-plus'></i>
+					<span class="text">New Faculty Requests</span>
+				</a>
+			</li>
+			
+			<li>
+				<a href="/AdminProjectRequests" >
+					<i class='bx bxs-folder-open' ></i>
+					
+					<span class="text">Project Requests</span>
+				</a>
+			</li>
+			<li>
+				<a href="/Logout" class="/Logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<a href="#" class="nav-link">Categories</a>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a href="/notification" class="notification">
+				<i class='bx bxs-bell' ></i>
+				<span class="num">8</span>
+			</a>
+			
+				<!-- Assuming this is in your navbar -->
+<nav>
+    <div class="profile" id="profile">
+        <img src="img/people.png" alt="Profile Picture" class="profile-img">
+    </div>
+    <div id="profileMenu" class="profile-menu">
+        <ul>         
+            <li><a href="/ALogout">Logout</a></li>
+        </ul>
+    </div>
+</nav>
+
+	
+
+
+
+
+
+
+
+
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>Project Requests</h1>
+                    <ul class="breadcrumb">
+						<li>
+							<a href="#">Leaderboard</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a class="active" href="#">Home</a>
+						</li>
+					</ul>
+					
+				</div>
+				<div class="right">
+					
+					<div class="right-part2">
+					<span >all</span>
+					<span >Ayurveda</span>
+					<span >Yoga</span>
+					<span >Unani</span>
+					<span >Siddha</span>
+					<span >Homeopathy</span>
+					<span>Naturopathy</span>
+					<span>Sowa-Rigwa</span>
+					<span >Bpharm</span>
+					<span>Others</span>
+
+
+					</div>
+				</div>
+				
+			</div>
+
+			<ul class="box-info">
+				<li>
+					<i class='bx bx-folder'></i>
+					<span class="text">
+						<h3>{{pubCount}}</h3>
+						<p>Projects</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bx-file-blank'></i>
+					<span class="text">
+						<h3>{{countresearch}}</h3>
+						<p>Research papers</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-notepad'></i>
+					<span class="text">
+						<h3>{{countpatent}}</h3>
+						<p>Patents</p>
+					</span>
+				</li>
+				
+				
+			</ul>
+
+
+			<div class="table-data">
+				<div class="order">
+					<div class="head">
+						<h3>Recent  Student Projects</h3>
+						
+						
+						<i class='bx bx-search' ></i>
+						<i class='bx bx-filter' ></i>
+					</div>
+					  {{#if Message}}
+        <p class="{{#if isError}}error-message{{else}}success-message{{/if}}">
+            {{Message}}
+        </p>
+        {{/if}}
+					{{#if Projects.length}}
+					<table>
+						<thead>
+							<tr>
+
+								<th>S.no</th>
+								<th>User</th>
+								<th>User Id</th>
+								<th>Date Order</th>
+								<th>Project Title</th>
+								<th>Team</th>
+								<th>Dept</th> 
+								<th>Status</th>
+								<th>project type</th> 
+								<th>Accept</th>
+								<th>Reject</th> 
+								</tr>
+						</thead>
+						<tbody>
+							{{#each Projects}}
+							<tr style="cursor: pointer;">
+								<td onclick="location.href='/viewProject/{{this.Uploadpublicationid}}'">
+									<span>{{increment @index}}</span>
+								</td>
+								<td class="std-profile" onclick="location.href='/viewAdmin
+								Project/{{this.Uploadpublicationid}}'">
+									
+									<p> <span><img src="/{{this.profilePic}}"></span>{{this.Username}}</p>
+								</td>
+								<td>{{this.UserId}}
+								<td>{{this.Uploaddate}}</td>
+								<td onclick="location.href='/viewAdminProject/{{this.Uploadpublicationid}}'">
+									<span>{{this.ProjectTitle}}</span>
+								</td>
+								<td>
+									<span>{{this.TeamName}}</span>
+								</td>
+								<td>
+									{{this.Dept}}
+								</td>
+
+<td>
+										 {{#if (eq Status "Completed")}}
+            <span class="status completed">Completed</span>
+          {{else if (eq Status "Pending")}}
+            <span class="status pending">Pending</span>
+          {{else if (eq Status "Accepted")}}
+            <span class="status process">Accepted</span>
+          {{else if (eq Status "Rejected")}}
+            <span class="status rejected">Rejected</span>
+          {{else}} 
+            <span class="status unknown">Unknown</span>
+          {{/if}}
+
+
+								</td>
+
+								<td onclick="location.href='/viewprojects/{{this.Uploadpublicationid}}'">
+									<span class="project-type">{{this.ProjectType}}</span>
+								</td>
+								
+                                <td>
+                                <form action="/AdminProjectReqAccept" method="post">
+								 <input type="hidden" name="id" value="{{this.id}}">
+  								 <button type="submit" class="submit">
+                                      <i class="fa-solid fa-circle-check"></i>
+								</button>
+								</form>	
+									
+									</td>
+								<td>
+									
+                                <form action="/AdminProjectReqReject" method="post">
+								 <input type="hidden" name="id" value="{{this.id}}">
+  								 <button type="submit" class="submit">
+                                      <i class="fa-solid fa-circle-xmark"></i>
+								</button>
+								</form>	
+									
+									
+									 
+									
+									
+									</td>
+							</tr>
+							   {{/each}}
+						</tbody>
+					</table> 
+					{{else}}
+        				<p>No user data found.</p>
+    				{{/if}}
+				</div>
+				
+			</div>
+
+
+
+
+<div class="table-data">
+				<div class="order">
+					<div class="head">
+						<h3>Recent Staff Publications</h3>
+						<i class='bx bx-search' ></i>
+						<i class='bx bx-filter' ></i>
+					</div>  
+					{{#if Uploadd.length}}
+					<table>
+						<thead>
+							<tr>
+								<th>S.no</th>
+								<th>User</th>
+								<th>User Id</th> 
+								<th>Date Order</th>
+								<th>Project Title</th> 
+								<th>Dept</th>
+								<th>Status</th>
+								<th>project type</th>  
+								<th>Accept</th>  
+								<th>Reject</th> 
+							</tr>
+						</thead>
+						<tbody>{{#each Uploadd}}
+							<tr   style="cursor: pointer;">
+
+								<td >
+									<span>{{increment @index}}  </span>
+								</td>
+								<td >
+									
+									<p> <span><img src="{{this.profilePic}}"></span>{{this.Username}}</p>
+								</td>
+								<td>{{this.UserId}}</td>
+								<td>{{this.Uploaddate}}</td>
+								<td > <span>{{this.ProjectTitle}}</span> </td>
+								
+								<td> {{this.Dept}} </td>
+								<td>
+										 {{#if (eq Status "Completed")}}
+            <span class="status completed">Completed</span>
+          {{else if (eq Status "Pending")}}
+            <span class="status pending">Pending</span>
+          {{else if (eq Status "Accepted")}}
+            <span class="status process">Accepted</span>
+          {{else if (eq Status "Rejected")}}
+            <span class="status rejected">Rejected</span>
+          {{else}} 
+            <span class="status unknown">Unknown</span>
+          {{/if}}
+
+
+								</td>
+
+								<td >
+                                    <span class="project-type">{{this.ProjectType}}</span></td>
+								 
+<td>
+ <form action="/AdminPublicationReqAccept" method="post">
+								 <input type="hidden" name="id" value="{{this.id}}">
+								 <input type="hidden" name="docid" value="{{this.UploadPublicationId}}">
+  								 <button type="submit" class="submit">
+                                      <i class="fa-solid fa-circle-check"></i>
+								</button>
+								</form>	
+</td>
+
+								<td>
+									 
+
+
+                                <form action="/AdminPublicationReject" method="post">
+								 <input type="hidden" name="id" value="{{this.id}}">
+								 <input type="hidden" name="docid" value="{{this.UploadPublicationId}}">
+  								 <button type="submit" class="submit">
+                                      <i class="fa-solid fa-circle-xmark"></i> 
+								</button>
+								</form>	
+									
+
+								</td>
+								
+
+							</tr> {{/each}}
+						</tbody>
+					</table> 
+					{{else}}
+        				<p>No user data found.</p>
+    				{{/if}}
+				</div>
+				
+			</div>
+			
+		</main>
+		<!-- MAIN -->
+	</section>
+	
+
+	<script src="/js/script.js"></script>
+</body>
+</html>

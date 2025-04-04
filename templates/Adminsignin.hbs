@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Signin Form</title>
+        <link rel="stylesheet" href="css/signin.css">
+</head>
+<body>
+<div class="body">
+
+    <div class="container">
+                 <div class="head">
+                  <span>Admin - Login</span>
+                </div>   
+        {{#if Message}}
+        <p class="{{#if isError}}error-message{{else}}success-message{{/if}}">
+            {{Message}}
+        </p>
+        {{/if}}
+
+        <form action="/AdminSigninAction" method="post" id="registrationForm" >
+             <div class="inputs">
+                    <input type="text" name="username" placeholder="Username or Email">
+                    <input type="password"name="password" placeholder="Password">
+                </div>
+                <button>Login</button>
+                {{!-- <a href="#">Forgot password</a> --}}
+            </form>
+            <div class="form-footer">
+                <p> <a href="/Main">Back</a></p> 
+            </div>
+    
+        </div>
+ 
+    </div>
+    
+</body>
+</html>

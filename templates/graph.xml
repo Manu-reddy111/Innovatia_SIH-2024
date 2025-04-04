@@ -1,0 +1,54 @@
+<svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .bar { fill: url(#gradient1); }
+        .bar2 { fill: url(#gradient2); }
+        .bar3 { fill: url(#gradient3); }
+        .bar4 { fill: url(#gradient4); }
+        .label { font-family: Arial, sans-serif; font-size: 14px; fill: #333; }
+        .value { font-weight: bold; fill: #fff; }
+    </style>
+
+    <!-- Gradients for bars -->
+    <defs>
+        <linearGradient id="gradient1" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-color="#673AB7"/>
+            <stop offset="100%" stop-color="#03A9F4"/>
+        </linearGradient>
+        <linearGradient id="gradient2" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-color="#F44336"/>
+            <stop offset="100%" stop-color="#FF9800"/>
+        </linearGradient>
+        <linearGradient id="gradient3" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-color="#4CAF50"/>
+            <stop offset="100%" stop-color="#8BC34A"/>
+        </linearGradient>
+        <linearGradient id="gradient4" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-color="#FFC107"/>
+            <stop offset="100%" stop-color="#FFEB3B"/>
+        </linearGradient>
+    </defs>
+
+    <!-- Title -->
+    <text x="180" y="30" font-size="20" font-weight="bold">📊 Business Potential Impact</text>
+
+    <!-- Bars -->
+    <rect x="350" y="60" width="300" height="30" fill="#ddd"/>
+    <rect x="150" y="60" width="320" height="30" class="bar"/>  <!-- 80% -->
+    <text x="430" y="80" class="value">80%</text>
+    <text x="10" y="80" class="label">Reduction in Errors</text>
+
+    <rect x="350" y="110" width="400" height="30" fill="#ddd"/>
+    <rect x="150" y="110" width="200" height="30" class="bar2"/> <!-- 50% -->
+    <text x="310" y="130" class="value">50%</text>
+    <text x="10" y="130" class="label">Faster Resolution</text>
+
+    <rect x="350" y="160" width="400" height="30" fill="#ddd"/>
+    <rect x="150" y="160" width="400" height="30" class="bar3"/> <!-- 100% -->
+    <text x="500" y="180" class="value">100%</text>
+    <text x="10" y="180" class="label">Legal Access for All</text>
+
+    <rect x="350" y="210" width="400" height="30" fill="#ddd"/>
+    <rect x="150" y="210" width="360" height="30" class="bar4"/> <!-- 90% -->
+    <text x="470" y="230" class="value">90%</text>
+    <text x="10" y="230" class="label">Improved Awareness</text>
+</svg>

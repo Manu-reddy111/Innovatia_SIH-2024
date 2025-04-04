@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="collegeanalytics.css">
+    
+    <title>Innovatia</title>
+</head>
+
+<body>
+    <!-- SIDEBAR -->
+    <section id="sidebar" class="hide">
+		<a href="./index.html" class="brand">
+			<i class='bx bxs-dashboard'></i>
+			<span class="text">Innovatia</span>
+		</a>
+		
+		<ul class="side-menu">
+			<li class="active">
+				<a href="./index.html" > <!-- matches contentMap['home'] -->
+
+					<i class='bx bxs-home-alt-2'></i>
+					<span class="text">Home</span>
+				</a>
+			</li>
+			<li>
+				<a href="./dashboard.html" >
+					<i class='bx bxs-dashboard'  ></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			<li >
+				<a href="./recentpublications.html" >
+					<i class='bx bxs-folder-open' ></i>
+					<span class="text">Publications</span>
+				</a>
+			</li>
+			<li>
+				<a href="./leaderboard.html" >
+					<i class='bx bxs-bar-chart-alt-2'></i>
+					<span class="text">Leaderboard</span>
+				</a>
+			</li>
+			
+			
+		
+			
+			<li>
+				<a href="./recentachievements.html" >
+					<i class='bx bxs-award'></i>
+					<span class="text">Achievements</span>
+				</a>
+			</li>
+			<li>
+				<a href="./recentgrants.html" >
+					<i class='bx bxs-bank' ></i>
+					<span class="text">Grants</span>
+				</a>
+			</li>
+			<li>
+				<a href="./recentstartupincubated.html" >
+					<i class='bx bxs-buildings'></i>
+					<span class="text">startupincubated</span>
+				</a>
+			</li>
+			
+		</ul>
+		<ul class="side-menu" >
+			<li>
+				<a href="./Settings.html">
+					<i class='bx bxs-cog' ></i>
+					<span class="text">Settings</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+    <!-- SIDEBAR -->
+
+    <!-- CONTENT -->
+    <section id="content">
+        <!-- NAVBAR -->
+        <nav>
+            <i class="bx bx-menu"></i>
+            <a href="#" class="nav-link">Categories</a>
+            
+            <form action="#">
+                <div class="form-input">
+                    <input type="search" placeholder="Search...">
+                    <button type="submit" class="search-btn"><i class="bx bx-search"></i></button>
+                </div>
+            </form>
+            
+            <input type="checkbox" id="switch-mode" hidden>
+            <label for="switch-mode" class="switch-mode"></label>
+            
+            <a href="notification.html" class="notification">
+                <i class="bx bxs-bell"></i>
+                <span class="num">8</span>
+            </a>
+            
+            <div class="profile" id="profile">
+                <img src="img/people.png" alt="Profile Picture" class="profile-img">
+            </div>
+            <div id="profileMenu" class="profile-menu">
+                <ul>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- NAVBAR -->
+
+        <!-- MAIN -->
+        <main>
+            <div class="head-title">
+                <div class="left">
+                    <h1>Home</h1>
+                    <ul class="breadcrumb">
+                        <li><a href="#">Dashboard</a></li>
+                        <li><i class="bx bx-chevron-right"></i></li>
+                        <li><a class="active" href="#">Home</a></li>
+                    </ul>
+                </div>
+                
+                <div class="right">
+                    <div class="right-part1">
+                        <a href="./collegeanalytics.html"><i class="bx bxs-doughnut-chart"></i><span class="text">Analytics</span></a>
+                        <a href="./collegeawards.html"><i class="bx bxs-award"></i><span class="text">Awards</span></a>
+                      
+						<a href="./collegestartupincubated.html" >
+							<i class='bx bxs-buildings'></i>
+							
+							
+							<span class="text">Startup incubated</span>
+						</a>
+                    </div>
+                    
+                    <div class="right-part2">
+                        <span >all</span>
+                        <span >Ayurveda</span>
+                        <span >Yoga</span>
+                        <span >Unani</span>
+                        <span >Siddha</span>
+                        <span >Homeopathy</span>
+                        <span>Naturopathy</span>
+                        <span>Sowa-Rigwa</span>
+                        <span >Bpharm</span>
+                        <span>Others</span>
+                    </div>
+                </div>
+            </div>
+
+			<div class="analytics">
+                <h1>Analytics</h1>
+                <div class="part1">
+               
+                        <div class="student-indicators-part1">
+                       
+                            <h3>Years</h3>
+                            <h3>Months</h3>
+                        </div>
+                        <div class="student-indicators-part2">
+                            <span>Students vs Innovations</span>
+                            <span>Students vs Grants</span>
+                            <span>Students vs Startupincubated</span>
+                            <span>Students vs Achievements</span>
+                        </div>
+                        <div class="student-indicators-parent">
+                            <div class="student-indicators-part3">
+                                <h4>Students vs Innovations </h4>
+                                <div id="chart"></div>
+                                
+                            
+                            </div> 
+                        </div>
+
+                </div>
+                <div class="part1">
+               
+                        <div class="project-indicators-part1">
+                       
+                            <h3>Years</h3>
+                            <h3>Months</h3>
+                        </div>
+                        <div class="project-indicators-part2">
+                           
+                            <span class="dynamic-text">Innovations vs Grants</span>
+                            <span class="dynamic-text">innovations vs Startupincubated</span>
+                            <span class="dynamic-text">Innovations vs Achievements</span>
+                        </div>
+                        <div class="project-indicators-parent">
+                            <div class="project-indicators-part3">
+                                <h4 id="dynamic-heading">Innovations vs Grants</h4>
+                                <div id="project-chart"></div>
+                                
+                            
+                            </div> 
+                        </div>
+
+                </div>
+                <div class="part1">
+                    <div class="dept-indicators-part1">
+                      <h3 data-type="years" class="active">Years</h3>
+                      <h3 data-type="months">Months</h3>
+                    </div>
+                    <div class="dept-indicators-part2">
+                      <span class="dynamic-text1 active" data-chart="innovation">Innovations</span>
+                      <span class="dynamic-text1" data-chart="grants">Grants</span>
+                      <span class="dynamic-text1" data-chart="startup">Startup Incubated</span>
+                      <span class="dynamic-text1" data-chart="achievements">Achievements</span>
+                    </div>
+                    <div class="dept-indicators-parent">
+                      <div class="project-indicators-part3">
+                        <h4 id="dynamic-heading1">Innovations</h4>
+                        <div id="project-piechart"></div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                <div class="part1">
+                    <div class="metrics-indicators-part1">
+                      <h3 data-type="years" class="active">Years</h3>
+                      <h3 data-type="months">Months</h3>
+                    </div>
+                   
+                    <div class="metrics-indicators-parent">
+                      <div class="metrics-indicators-part3">
+                        <h4 >Indicators metrics</h4>
+                        <div id="metrics-areachart"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="part1">
+                    <div class="collegemetrics-indicators-part1">
+                      <h3 data-type="years" class="active" id="yearsBtn">Years</h3>
+                      <h3 data-type="months" id="monthsBtn">Months</h3>
+                    </div>
+                    <div class="collegemetrics-indicators-parent">
+                      <div class="collegemetrics-indicators-part3">
+                        <h4>Overall Performance</h4>
+                        <div id="collegemetrics-areachart"></div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                  
+                  
+                
+               
+
+                    
+
+                
+            </div>
+        </main>
+        <!-- MAIN -->
+    </section>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/4.1.0/apexcharts.min.js" integrity="sha512-pX8wly6uaNHjO2Idm8xpq7Fu52iU/F3IK2rS8vTUlw7138ZsDCgfljwotyOpQxycTqK4MryB4Pv7ArDmzx7sPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="./analytics.js"></script>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
